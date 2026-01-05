@@ -4,27 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Rotaract Club of Hyderabad Medicos</title>
+
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
     body {
-      padding-top: 80px; /* ensures content is visible below fixed navbar */
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fafafa;
+      padding-top: 90px; /* REQUIRED for fixed navbar */
     }
-    .navbar { background: #800000; }
-    .navbar-nav .nav-link { color: white !important; }
-    .section-title { text-align: center; margin-top: 40px; margin-bottom: 20px; }
+
+    .navbar {
+      background-color: #800000;
+    }
+
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 15px;
+      text-align: center;
+    }
   </style>
 </head>
+
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container">
     <a class="navbar-brand fw-bold" href="index.html">Rotaract Hyderabad Medicos</a>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
@@ -39,25 +51,31 @@
   </div>
 </nav>
 
-<!-- About Page Content -->
-<div class="container">
+<!-- Page Content (MATCHES EVENTS PAGE STYLE) -->
+<main class="container">
 
-  <h2 class="section-title">Who We Are</h2>
-  <p>
-    The Rotaract Club of Hyderabad Medicos is a student-led organization comprising medical and allied health sciences students who share a common vision of service, leadership, and social responsibility. Functioning under the guidance of Rotary International, our club provides a platform for young healthcare professionals to grow personally and professionally while serving society with compassion and integrity.
-  </p>
+  <section class="my-5">
+    <h2 class="section-title">Who We Are</h2>
+    <p class="text-center">
+      The Rotaract Club of Hyderabad Medicos is a student-led organization comprising medical and allied health sciences students united by a commitment to service, leadership, and social responsibility.
+    </p>
+  </section>
 
-  <h2 class="section-title">What We Do</h2>
-  <p>
-    We actively participate in community service and healthcare-oriented initiatives such as health awareness programs, medical camps, blood donation drives, and social outreach activities. Alongside service projects, we focus on leadership development, professional networking, teamwork, and ethical practice, enabling our members to develop skills that extend far beyond the classroom and into their future medical careers.
-  </p>
+  <section class="my-5">
+    <h2 class="section-title">What We Do</h2>
+    <p class="text-center">
+      We organize health awareness programs, blood donation drives, medical camps, and social outreach initiatives while fostering leadership, teamwork, and ethical values among our members.
+    </p>
+  </section>
 
-  <h2 class="section-title">Where We Are</h2>
-  <p>
-    Based in Hyderabad, our club serves communities across the city and surrounding regions. Through collaborations with Rotary clubs, medical institutions, and social organizations, we work both at the grassroots level and on broader platforms to create sustainable impact.
-  </p>
+  <section class="my-5">
+    <h2 class="section-title">Where We Are</h2>
+    <p class="text-center">
+      Based in Hyderabad, we serve communities across the city and nearby regions through collaborations with Rotary clubs, medical institutions, and social organizations.
+    </p>
+  </section>
 
-</div>
+</main>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
