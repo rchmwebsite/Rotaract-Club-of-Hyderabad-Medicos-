@@ -3,26 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Rotaract Club of Hyderabad Medicos</title>
+  <title>Rotaract Club of Hyderabad Medicos</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     :root {
       --rotaract-maroon: #800000;
       --rotaract-pink: #E91E63;
+      --rotaract-white: #ffffff;
     }
-    body { font-family: 'Segoe UI', sans-serif; background: #fafafa; }
-    .navbar { background: var(--rotaract-maroon); }
-    .navbar-nav .nav-link { color: white !important; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Navbar */
+    .navbar {
+      background: var(--rotaract-maroon);
+    }
+    .navbar-nav .nav-link {
+      color: var(--rotaract-white) !important;
+      position: relative;
+    }
+    .navbar-nav .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: 0;
+      background: var(--rotaract-pink);
+      transition: width 0.3s;
+    }
+    .navbar-nav .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* Hero */
     .hero {
-      background: linear-gradient(rgba(128,0,0,0.7), rgba(128,0,0,0.7)), url('assets/images/about.jpg') center/cover no-repeat;
-      color: white; text-align: center; padding: 100px 20px;
+      background: linear-gradient(rgba(128,0,0,0.7), rgba(128,0,0,0.7)), url('assets/images/hero.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
     }
-    footer { background: var(--rotaract-maroon); color: white; padding: 20px; text-align: center; }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      animation: slideDown 1s ease;
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    /* Board Members */
+    .board-member-card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .board-member-card img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+    .board-member-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(233, 30, 99, 0.4);
+    }
+    .board-member-card:hover img {
+      transform: scale(1.1);
+      border: 3px solid var(--rotaract-pink);
+    }
+
+    /* Buttons */
+    .btn-rotaract {
+      background: var(--rotaract-pink);
+      color: white;
+      border-radius: 30px;
+      padding: 10px 25px;
+      transition: background 0.3s;
+    }
+    .btn-rotaract:hover {
+      background: var(--rotaract-maroon);
+    }
+
+    /* Gallery */
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--rotaract-maroon);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
       <a class="navbar-brand fw-bold" href="index.html">Rotaract Hyderabad Medicos</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -31,7 +127,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="events.html">Our Events</a></li>
           <li class="nav-item"><a class="nav-link" href="board.html">Board Members</a></li>
           <li class="nav-item"><a class="nav-link" href="join.html">Join Us</a></li>
@@ -43,10 +139,10 @@
   </nav>
 
   <!-- Hero -->
-
   <section class="hero">
     <h1>About Us</h1>
     <p></p>
+    <a href="join.html" class="btn btn-rotaract mt-3">Join Now</a>
   </section>
 
    <!-- Example Page Content Placeholder -->
@@ -72,3 +168,12 @@
       Based in Hyderabad, our club serves communities across the city and surrounding regions. Through collaborations with Rotary clubs, medical institutions, and social organizations, we work both at the grassroots level and on broader platforms to create sustainable impact. Our reach continues to grow as we expand our initiatives and partnerships in the healthcare and social service sectors.
     </p>
   </section>
+
+<!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Rotaract Club of Hyderabad Medicos. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
